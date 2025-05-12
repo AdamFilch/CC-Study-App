@@ -1,0 +1,706 @@
+[
+    {
+        "question": "A cyberattacker changes the website of a pharmacy so it displays\nincorrect information about COVID testing. This is an example of\nwhat kind of compromise?",
+        "options": {
+            "option1": "Confidentiality",
+            "option2": "Integrity",
+            "option3": "Availability",
+            "option4": "Nonrepudiation"
+        },
+        "answer": "option2",
+        "answer_explanation": "Changing data without proper authorization is a compromise of integrity."
+    },
+    {
+        "question": "The function of a computer system that verifies the identity of a user\nis called _________.",
+        "options": {
+            "option1": "Authentication",
+            "option2": "Authorization",
+            "option3": "Authenticity",
+            "option4": "Availability"
+        },
+        "answer": "option1",
+        "answer_explanation": "Authentication is the function of verifying a user’s identity."
+    },
+    {
+        "question": "Jane received an electronic message from Fred that was digitally\nsigned proving it came from him. However, Fred said he never sent it.\nThis is an example of what message integrity characteristic?",
+        "options": {
+            "option1": "Nonreputation",
+            "option2": "Nonrefutability",
+            "option3": "Nonrepudiation",
+            "option4": "Authenticity"
+        },
+        "answer": "option3",
+        "answer_explanation": "Nonrepudiation technologies are used to guarantee that a sender of a message cannot later deny that they sent the message."
+    },
+    {
+        "question": "Which of the following elements do not apply to privacy?",
+        "options": {
+            "option1": "Confidentiality",
+            "option2": "Integrity",
+            "option3": "Availability",
+            "option4": "None of the above"
+        },
+        "answer": "option4",
+        "answer_explanation": "All of the items listed apply to privacy."
+    },
+    {
+        "question": "Information assurance refers to the ____________ of information\nsecurity.",
+        "options": {
+            "option1": "Quality",
+            "option2": "Confidentiality",
+            "option3": "Ethics",
+            "option4": "Measurement"
+        },
+        "answer": "option4",
+        "answer_explanation": "Information assurance is the measurement of the security controls an organization has put into place."
+    },
+    {
+        "question": "What is the first thing a cyberattacker would want to do to launch an\nattack against an organization?",
+        "options": {
+            "option1": "Learn about the organization’s vulnerabilities.",
+            "option2": "Learn about the organization’s business, including domain names,\ncorporate information, facilities, names of employees, etc.",
+            "option3": "Deploy malware.",
+            "option4": "Steal data."
+        },
+        "answer": "option2",
+        "answer_explanation": "While learning about vulnerabilities might seem like a good answer, the best answer is learning about the organization’s business details because that will provide the basic information the cyberattacker can use to launch the attack."
+    },
+    {
+        "question": "An earthquake is an example of a ____________?",
+        "options": {
+            "option1": "Threat agent",
+            "option2": "Threat",
+            "option3": "Vulnerability",
+            "option4": "Risk"
+        },
+        "answer": "option2",
+        "answer_explanation": "An earthquake is a natural disaster that may occur and that could cause harm to an organization; therefore it is a threat to the organization."
+    },
+    {
+        "question": "Which of the following statements is most correct?",
+        "options": {
+            "option1": "Security should be done the same way regardless of the situation.",
+            "option2": "Security should be tailored based on the situation.",
+            "option3": "It’s always best to mitigate risks rather than transfer them.",
+            "option4": "Risk avoidance trumps security controls every time."
+        },
+        "answer": "option2",
+        "answer_explanation": "Answers A, C, and D all contain absolute statements about applying security. But security is never absolute; it is tailored based on the situation and the organization’s tolerance for risk, so the best answer is B."
+    },
+    {
+        "question": "You are asked to perform a risk assessment of an information system\nfor the purpose of recommending the most appropriate security\ncontrols. You have a short amount of time to do this. You have\ninformation about how each asset in the system is used and its\nimportance to the business, but you have no financial information\nabout the assets or the information systems. Which is the most\nappropriate method to use for this assessment?",
+        "options": {
+            "option1": "Qualitative",
+            "option2": "Threat modeling",
+            "option3": "Quantitative",
+            "option4": "Delphi"
+        },
+        "answer": "option1",
+        "answer_explanation": "Since you have no financial data, a quantitative assessment is not possible, but since you have information about how each asset in the system is used and its importance to the business, you have what you need to do a qualitative analysis."
+    },
+    {
+        "question": "You are asked to implement a risk treatment in which your IT\ndepartment is removing a server from the environment that it deems is\ntoo risky due to having too many vulnerabilities in it. You have just\npracticed which type of risk treatment?",
+        "options": {
+            "option1": "Risk transfer",
+            "option2": "Risk avoidance",
+            "option3": "Risk acceptance",
+            "option4": "Risk mitigation"
+        },
+        "answer": "option3",
+        "answer_explanation": "Risk avoidance is the best answer because by removing the risky server altogether, you are avoiding the risk. Answer D may have been considered because vulnerability mitigation is a type of risk treatment, but that usually involves addressing specific vulnerabilities, not removing entire systems or services."
+    },
+    {
+        "question": "A security engineer is performing a review of an organization’s\ndatacenter security controls. They document that the datacenter lacks\nsecurity cameras for monitoring the facilities. What type of control\ndoes this represent?",
+        "options": {
+            "option1": "Administrative",
+            "option2": "Technical",
+            "option3": "Physical",
+            "option4": "Logical"
+        },
+        "answer": "option3",
+        "answer_explanation": "Security cameras used for monitoring facilities are an example of physical security controls. Administrative controls are managementoriented controls such as documentation, policies, procedures, and training. Technical or logical controls are hardware or software components implemented by computer systems or network devices."
+    },
+    {
+        "question": "Which of the following statements is true regarding the types of\nsecurity controls?",
+        "options": {
+            "option1": "Physical controls are also referred to as logical controls.",
+            "option2": "Logical controls are also referred to as managerial controls.",
+            "option3": "Physical controls are also referred to as managerial controls.",
+            "option4": "Administrative controls are also referred to as soft controls."
+        },
+        "answer": "option4",
+        "answer_explanation": "Administrative controls are also referred to as soft controls or managerial controls. Technical controls are also referred to as logical controls."
+    },
+    {
+        "question": "The senior security engineer is creating a document that provides\nstep-by-step instructions on how to launch a vulnerability scan\nutilizing the organization’s vulnerability scanning tool that all security\nengineers will be required to follow. Which of the following\ngovernance elements is this an example of?",
+        "options": {
+            "option1": "Policy",
+            "option2": "Procedure",
+            "option3": "Guideline",
+            "option4": "Law"
+        },
+        "answer": "option2",
+        "answer_explanation": "A document containing step-by-step instructions on how to perform a vulnerability scanning is an example of a procedure. Policies are high-level management statements providing directives to the organization but do not prescribe exact steps. Guidelines serve as best practice references but are not required to be followed. While following the procedure may be a requirement of the business, the procedure itself is not a law."
+    },
+    {
+        "question": "An information security policy is an example of which of the\nfollowing types of controls?",
+        "options": {
+            "option1": "Administrative",
+            "option2": "Technical",
+            "option3": "Logical",
+            "option4": "Physical"
+        },
+        "answer": "option1",
+        "answer_explanation": "A policy is an example of an administrative control. Administrative controls are management-oriented controls that provide directives and instruction aimed at people within the organization, such as documentation, training, and other personnel management practices. Technical controls, also known as logical controls, are hardware or software components that protect virtual resources. Physical controls are tangible controls put in place to protect physical resources against physical threats"
+    },
+    {
+        "question": "Sarah is a security engineer for a Software as a Service (SaaS)\norganization. Her friend Kyle is a systems administrator for the\norganization and helped her get the job by serving as a reference.\nWhile reviewing some system logs, Sarah discovered that Kyle is\nrunning a crypto-mining program on a company server for his own\nfinancial gain. How should Sarah respond to this situation?",
+        "options": {
+            "option1": "Ask Kyle to stop",
+            "option2": "Ask Kyle to share the profits with her",
+            "option3": "Mind her own business",
+            "option4": "Escalate to senior management"
+        },
+        "answer": "option4",
+        "answer_explanation": "Sarah should immediately escalate this to senior leadership in accordance with the organization’s policies and procedures. This would be the ethical response to this situation."
+    },
+    {
+        "question": "Jane is a security administrator setting up access for a new employee\nwho works in the manufacturing department. Jane makes sure to\nenable the employee’s access for the manufacturing area but not for\nthe parts storage area. What best describes the principle Jane is\napplying?",
+        "options": {
+            "option1": "Principle of authentication",
+            "option2": "Two-person rule",
+            "option3": "Need to know",
+            "option4": "Least privilege"
+        },
+        "answer": "option4",
+        "answer_explanation": "Least privilege is the most correct answer. By giving the employee access to the area the employee requires access to but no more, Jane is applying the principle of least privilege."
+    },
+    {
+        "question": "Which statement best describes the relationship between subjects,\nobjects, and rules?",
+        "options": {
+            "option1": "A subject grants access to an object based on rules.",
+            "option2": "An object is granted access to a subject based on rules.",
+            "option3": "A subject is granted access to an object based on rules.",
+            "option4": "An object is granted access to a subject based on credentials."
+        },
+        "answer": "option3",
+        "answer_explanation": "After first requesting access, a subject gets access to an object based on rules."
+    },
+    {
+        "question": "Credentials are composed of which of the following elements?",
+        "options": {
+            "option1": "Username and password",
+            "option2": "Authorization and accountability",
+            "option3": "Something you know and something you have",
+            "option4": "Subjects and objects"
+        },
+        "answer": "option1",
+        "answer_explanation": "Identification (commonly a username, ID, or account number) and authentication (commonly a password, PIN, or token) are typically used in combination and are called credentials."
+    },
+    {
+        "question": "Joe has to log in to many systems on a daily basis and has too many\npasswords to remember. What is the best way for Joe to manage his\npasswords?",
+        "options": {
+            "option1": "Write the passwords down on a piece of paper.",
+            "option2": "Store the passwords in a text file and store it in a safe place.",
+            "option3": "Use the same password for every system so he only has to\nremember one password.",
+            "option4": "Use a password manager or password vault software."
+        },
+        "answer": "option4",
+        "answer_explanation": "The best answer is to use a password manager or password vault software to manage passwords. These products require credentials to log in and protect the passwords with encryption and good access control. None of the other answers provide a secure solution."
+    },
+    {
+        "question": "Debby has been an employee of Acme Corp. for over 20 years.\nDuring that time, she has been able to access more and more systems.\nNow she has access to systems she doesn’t even need access to in\norder to do her job. This is an example of what type of situation?",
+        "options": {
+            "option1": "Privilege modification",
+            "option2": "Access management",
+            "option3": "Privileged access management",
+            "option4": "Privilege creep"
+        },
+        "answer": "option4",
+        "answer_explanation": "The situation described is an example of privilege creep, where over time a person’s access increases beyond that which they require to do their job."
+    },
+    {
+        "question": "The identity and access management lifecycle consists of which\nsteps?",
+        "options": {
+            "option1": "Provisioning, review, revocation",
+            "option2": "Setup, review, auditing",
+            "option3": "Creation, monitoring, termination",
+            "option4": "Identification, authentication, authorization"
+        },
+        "answer": "option1",
+        "answer_explanation": "The identity and access management lifecycle consists of provisioning, review, and revocation steps."
+    },
+    {
+        "question": "Which of the following access control models leverages roles to\nprovision access, where users with similar access needs are assigned\nto the same role?",
+        "options": {
+            "option1": "DAC",
+            "option2": "MAC",
+            "option3": "RBAC",
+            "option4": "None of the above"
+        },
+        "answer": "option3",
+        "answer_explanation": "Role-based access control (RBAC) enforces access based on roles that define permissions and the level of access provided to any user assigned to that role. Roles are typically developed for similar users with the same access needs (e.g., HR, Sales, IT, Security)."
+    },
+    {
+        "question": "An organization is concerned about the risk of a car driving from the\nparking lot through the entrance of the building. Which of the\nfollowing security measures would best help address this concern?",
+        "options": {
+            "option1": "Biometrics",
+            "option2": "RBAC",
+            "option3": "Badge system",
+            "option4": "Bollards"
+        },
+        "answer": "option4",
+        "answer_explanation": "Bollards are pillars or spheres made out of hard material used to prevent vehicles from driving through entrances. Biometrics and badge systems are measures to implement physical access control but would not prevent a car from driving through the entrance. RBAC is an access control model."
+    },
+    {
+        "question": "The security team is reviewing the configuration of the door that\nserves as the only entrance or exit to the datacenter. Organization\npersonnel commonly access the datacenter to perform their work. In\nthe event of a fire that impacts power to the door-locking mechanism,\nwhich of the following configurations is best?",
+        "options": {
+            "option1": "The door should always remain locked.",
+            "option2": "The door should fail-secure.",
+            "option3": "The door should fail-open.",
+            "option4": "The door should automatically lock when there is no power."
+        },
+        "answer": "option3",
+        "answer_explanation": "The door should fail-open (also known as fail-safe). While this is a less secure option, it ensures the preservation of human life, which is the number-one priority."
+    },
+    {
+        "question": "The security team of an organization is concerned about the physical\nsecurity of datacenter access. They want the datacenter entrance built\nin such a way that there are two doors with locks and the first door\nmust close before the next door can be unlocked. Which of the\nfollowing is this an example of?",
+        "options": {
+            "option1": "Bollard",
+            "option2": "Mantrap",
+            "option3": "Fence",
+            "option4": "Biometric"
+        },
+        "answer": "option2",
+        "answer_explanation": "A mantrap is an area that has two doors built in such a way that the first door must be closed before the second door can be opened."
+    },
+    {
+        "question": "Which of the following access control models allows the creator of a\nresource the ability to assign permissions to other users?",
+        "options": {
+            "option1": "DAC",
+            "option2": "MAC",
+            "option3": "RBAC",
+            "option4": "None of the above"
+        },
+        "answer": "option1",
+        "answer_explanation": "Discretionary access control (DAC) provides the owner of the resource, typically the creator, full control to configure which users can access the resource."
+    },
+    {
+        "question": "Which of the following is referred to as a physical address in\ncomputer networking?",
+        "options": {
+            "option1": "IPv4 address",
+            "option2": "IPv6 address",
+            "option3": "MAC address",
+            "option4": "Loopback address"
+        },
+        "answer": "option3",
+        "answer_explanation": "Media access control (MAC) addresses are often referred to as a physical address or hardware address since they are assigned to the device’s physical hardware. Internet Protocol (IP) addresses are known as logical addresses. A loopback address is a special type of IP address."
+    },
+    {
+        "question": "How many layers are there in the OSI model?",
+        "options": {
+            "option1": "8",
+            "option2": "7",
+            "option3": "6",
+            "option4": "5"
+        },
+        "answer": "option2",
+        "answer_explanation": "There are seven layers in the OSI model. These Include Application, Presentation, Session, Transport, Network, Data, and Physical."
+    },
+    {
+        "question": "Which of the following terms best describes a computer that provides\ncontent to other computers such as a website or an application?",
+        "options": {
+            "option1": "Client",
+            "option2": "Server",
+            "option3": "Endpoint",
+            "option4": "Router"
+        },
+        "answer": "option2",
+        "answer_explanation": "Server is a term that describes a computer that serves content or provides a service to another computer on a network. A client is a computer that accesses or uses the content or service provided by the server. An endpoint is a computing device on a network, which could include a server but is not the best answer. A router is a network device that routes traffic on a network."
+    },
+    {
+        "question": "What is the name of the seventh layer of the OSI model?",
+        "options": {
+            "option1": "Application",
+            "option2": "Session",
+            "option3": "Presentation",
+            "option4": "Network"
+        },
+        "answer": "option1",
+        "answer_explanation": "The Application Layer is Layer 7 (the uppermost layer) of the OSI model. The order of the layers from top (Layer 7) to bottom (Layer 1) are Application, Presentation, Session, Transport, Network, Data Link, and Physical."
+    },
+    {
+        "question": "Which of the following attacks are most likely to be carried out by a\nbotnet?",
+        "options": {
+            "option1": "Advanced persistent threat attack",
+            "option2": "DDoS attack",
+            "option3": "Trojan horse attack",
+            "option4": "Backdoor attack"
+        },
+        "answer": "option2",
+        "answer_explanation": "A botnet is a group of computers under the control of an attacker, most often for a coordinated attacker such as a DDoS attack. Advanced persistent threat and backdoors are not specific types of attacks, but rather features of attacks. A trojan horse is a type of attack but unlikely to be carried out by a botnet."
+    },
+    {
+        "question": "What is the best description of the difference between a phishing email and a spear phishing e-mail?",
+        "options": {
+            "option1": "A phishing e-mail is sent to a specific person; a spear phishing email is sent to an entire company.",
+            "option2": "A phishing e-mail is sent to random recipients; a spear phishing email is sent to specific recipients.",
+            "option3": "A phishing e-mail is sent to an entire company; a spear phishing\ne-mail is sent to a specific person.",
+            "option4": "A spear phishing e-mail is sent to random recipients; a phishing email is sent to specific recipients.\n\nANS: A phishing e-mail is sent to random recipients; a spear phishing email is sent to specific recipients. A phishing e-mail is literally like\ngoing fishing—you cast a wide net randomly and you see what you\nget. Conversely spear phishing is literally like spearfishing—you\nhave a specific target in mind, and you shoot the spear directly at it.\nA spear phishing e-mail is sent to a specific person or specific people\nor an organization.\n\n33. Which of the following is not a true statement about a worm?\nA. It can replicate itself.\nB. It is a type of malware.\nC. It is a type of botnet.\nD. It does not require a host program to infect and deliver it to the\nvictim system."
+        },
+        "answer": "option3",
+        "answer_explanation": "A worm is not a type of botnet. A worm can replicate itself and is a type of malware, but since it isn’t a virus, it does not require a host program to infect and serve as the delivery mechanism."
+    },
+    {
+        "question": "What is the primary difference between an IDS and an IPS?",
+        "options": {
+            "option1": "They both do the same thing.",
+            "option2": "An IDS detects malicious activity, whereas an IPS prevents the\nactivity from happening in the first place.",
+            "option3": "An IDS detects malicious activity, whereas an IPS monitors\nsystem performance.",
+            "option4": "An IDS detects malicious activity, whereas an IPS detects\nmalicious activity and takes action on it."
+        },
+        "answer": "option4",
+        "answer_explanation": "An IDS, which stands for intrusion detection system, detects malicious activity, whereas an IPS, which stands for intrusion prevention system, detects malicious activity and takes action on it."
+    },
+    {
+        "question": "Joe is a cyber criminal who has targeted a web server for a potential\ncyberattack. Joe wants to know if the server has any unpatched\nvulnerabilities he might be able to exploit. Which of the following\nactions is Joe most likely to take?",
+        "options": {
+            "option1": "Launch a smurf attack against the target server.",
+            "option2": "Run a vulnerability scan against the target server.",
+            "option3": "Send a phishing e-mail to the target server.",
+            "option4": "Send a spear phishing e-mail to the target server."
+        },
+        "answer": "option2",
+        "answer_explanation": "The answer is to run a vulnerability scan, as that is the only one of the choices that will reveal vulnerabilities on the server."
+    },
+    {
+        "question": "__________________ is a method of attack where a hacker enters\nSQL commands into fields on a vulnerable web page. The commands\nare executed without proper authorization.",
+        "options": {
+            "option1": "Buffer overflow",
+            "option2": "SQL injection",
+            "option3": "HTTP response splitting",
+            "option4": "Backdoor"
+        },
+        "answer": "option2",
+        "answer_explanation": "If a web server software does not properly check the data input by the user, it could allow an attacker to put SQL commands in the field, which are then executed by the SQL database without proper authorization. This is called a SQL injection attack."
+    },
+    {
+        "question": "Most cyber criminals would agree that _________________ are the\nweakest link in cybersecurity.",
+        "options": {
+            "option1": "Passwords",
+            "option2": "Backdoors",
+            "option3": "Laws",
+            "option4": "People"
+        },
+        "answer": "option4",
+        "answer_explanation": "It is widely acknowledged that people are the weakest link in cybersecurity. Despite extensive progress in technical tools and controls, deliberate or accidental acts by people lead to the largest number of and most damaging security breaches."
+    },
+    {
+        "question": "A hacker uses a phishing attack to obtain a user’s credentials, access\ntheir company’s database, and steal proprietary information. This is an\nexample of _______________.",
+        "options": {
+            "option1": "Denial of service",
+            "option2": "Advanced persistent threat",
+            "option3": "Extortion",
+            "option4": "Data exfiltration"
+        },
+        "answer": "option4",
+        "answer_explanation": "The correct answer is data exfiltration, which is the unauthorized transfer of data from a computer or network."
+    },
+    {
+        "question": "A sophisticated cyber criminal gains access to a financial institution’s\ne-mail server, installs malware, and then over a period of weeks,\nmoves to other servers and systems on the company’s network,\ninstalling other malware and tools, finding other credentials, stealing\ndata, and scrubbing logs to cover her tracks. Which term best\ndescribes this type of activity?",
+        "options": {
+            "option1": "Denial of service attack",
+            "option2": "Advanced persistent threat attack",
+            "option3": "Extortion attack",
+            "option4": "Website defacement attack"
+        },
+        "answer": "option2",
+        "answer_explanation": "During an advanced persistent threat attack, there is a sophisticated cyber criminal seeking to expand the attack over time, probing the network, finding more systems with vulnerabilities, exploiting them, and gaining unauthorized access to more and more systems and data, all the while doing things to cover their tracks."
+    },
+    {
+        "question": "Mary is a network engineer who wants to install a firewall in front of\na database server to hide its IP address. What type of firewall should\nMary choose?",
+        "options": {
+            "option1": "Proxy",
+            "option2": "Packet filter",
+            "option3": "Stateful/dynamic packet filter",
+            "option4": "Database filter"
+        },
+        "answer": "option1",
+        "answer_explanation": "A proxy firewall impersonates the system at the other end of the connection and hides the IP address of the devices within the network it is protecting."
+    },
+    {
+        "question": "Antivirus software vendors use ______________ to keep up with the\nlatest information about viruses and threats.",
+        "options": {
+            "option1": "Google",
+            "option2": "National Vulnerability Database",
+            "option3": "Threat intelligence",
+            "option4": "National Security Agency"
+        },
+        "answer": "option3",
+        "answer_explanation": "Organizations and product vendors use threat intelligence from a variety of sources. By collecting and studying data about threats, vendors can prepare for and defend against them."
+    },
+    {
+        "question": "When leveraging a third-party cloud service provider, which of the\nfollowing is always the responsibility of the provider?",
+        "options": {
+            "option1": "Data security",
+            "option2": "Physical security of the datacenter",
+            "option3": "Identity and access management controls",
+            "option4": "Endpoint protection"
+        },
+        "answer": "option2",
+        "answer_explanation": "Physical security of the datacenter is always the responsibility of the cloud service provider."
+    },
+    {
+        "question": "An organization is utilizing a public cloud from a cloud service whose\nservice offering allows the organization to use a framework to build\nand deploy custom applications. Which of the following cloud service\nmodels is being utilized?",
+        "options": {
+            "option1": "IaaS",
+            "option2": "PaaS",
+            "option3": "SaaS",
+            "option4": "On-premises\nANS: B. Platform as a service (PaaS) provides cloud service customers\nwith development or application platforms to build and deploy\napplications.\n\n45. An organization is using a cloud service provider to host their\ninfrastructure. The cloud service provider manages the underlying\ninfrastructure, and the organization manages the platforms and\nsoftware (such as the OS, development tools, and applications).\nWhich of the following cloud service models is being utilized?\nA. IaaS\nB. PaaS\nC. SaaS\nD. On-premises"
+        },
+        "answer": "option1",
+        "answer_explanation": "Infrastructure as a service (IaaS) provides customers with access to a pool of infrastructure resources such as network, server, and storage resources that can be virtually provisioned. The cloud service provider manages the underlying physical infrastructure, and the cloud service customer manages the platforms and software (such as OS, development tools, and applications) that run on the infrastructure."
+    },
+    {
+        "question": "An organization has built out a cloud environment in their own\ndatacenter for exclusive use by their employees to allow other teams\nto provision and manage virtual resources. Which of the following\ncloud deployment models is this an example of?",
+        "options": {
+            "option1": "Public",
+            "option2": "Private",
+            "option3": "Community",
+            "option4": "Hybrid\nANS: B. A private cloud deployment model consists of computing\ninfrastructure and resources that are dedicated for use by a single\norganization.\n\n47. An organization is hosting applications in a private cloud environment\nand also making use of Amazon Web Services (AWS) to load-balance\nthe traffic for applications if there is a spike in demand. Which of the\nfollowing cloud deployment models is this an example of?\nA. Public\nB. Private\nC. Community\nD. Hybrid"
+        },
+        "answer": "option4",
+        "answer_explanation": "A hybrid cloud deployment model is a mix of the other models (such as a public and private model)."
+    },
+    {
+        "question": "An organization is utilizing Google Mail (Gmail) as their e-mail\nservice provider. Which of the following types of cloud service\nmodels is being utilized?",
+        "options": {
+            "option1": "SaaS",
+            "option2": "PaaS",
+            "option3": "IaaS",
+            "option4": "On-premises"
+        },
+        "answer": "option1",
+        "answer_explanation": "Software as a service (SaaS) provides customers with access to an application hosted by the cloud service provider (such as an e-mail service)."
+    },
+    {
+        "question": "Alice sends Bob a message encrypted with a private key. Bob\ndecrypts the message with the same private key. Which of the\nfollowing types of encryption is this an example of?",
+        "options": {
+            "option1": "Asymmetric",
+            "option2": "Symmetric",
+            "option3": "Hashing",
+            "option4": "None of the above"
+        },
+        "answer": "option2",
+        "answer_explanation": "Symmetric encryption uses the same key for encryption and decryption. This means that the sender and receiver of a message need to have a copy of the same key in order to encrypt/decrypt the message."
+    },
+    {
+        "question": "Which of the following is not a secure method of data deletion?",
+        "options": {
+            "option1": "Emptying the recycle bin on your computer desktop",
+            "option2": "Physical destruction of a hard drive",
+            "option3": "Zeroization",
+            "option4": "Overwriting"
+        },
+        "answer": "option1",
+        "answer_explanation": "Pressing the delete key on a computer and emptying the recycle bin on your desktop are not secure methods of data destruction, as the data is not actually securely deleted from the hard drive. These actions simply tell the operating system that the location on the hard drive is free for use."
+    },
+    {
+        "question": "Which of the following can be used to create message digests?",
+        "options": {
+            "option1": "Symmetric encryption algorithms",
+            "option2": "Asymmetric encryption algorithms",
+            "option3": "Hash functions",
+            "option4": "All of the above"
+        },
+        "answer": "option3",
+        "answer_explanation": "Hash functions transform information into fixed-length output known as a hash value, message digest, or fingerprint."
+    },
+    {
+        "question": "A security administrator is looking for ways to automate the\nmonitoring of logs throughout the environment. Which of the\nfollowing solutions would help provide automated monitoring\ncapability?",
+        "options": {
+            "option1": "Regularly review the logs",
+            "option2": "Store the logs on a centralized log server",
+            "option3": "Implement a SIEM",
+            "option4": "Implement a firewall"
+        },
+        "answer": "option3",
+        "answer_explanation": "Implementing a security information and event management (SIEM) system is one example of how an organization can implement automated monitoring. A SIEM system is a tool that ingests logs from various sources, serves as a central secure log repository, and contains rules that alert on suspicious events identified in logs."
+    },
+    {
+        "question": "Which of the following types of encryption uses two keys: one for\nencryption and a separate key for decryption?",
+        "options": {
+            "option1": "Asymmetric",
+            "option2": "Symmetric",
+            "option3": "Hashing",
+            "option4": "None of the above"
+        },
+        "answer": "option1",
+        "answer_explanation": "Asymmetric encryption uses two keys: a public key (for encryption) and a private key (for decryption)."
+    },
+    {
+        "question": "As the new CISO of his organization, Joe decided to initiate a\ncomprehensive set of scans. The scans reported that nearly all of his\nendpoints have known operating system vulnerabilities. What is the\nmost likely root cause of this situation?",
+        "options": {
+            "option1": "The organization is the victim of an advanced persistent threat.",
+            "option2": "The endpoints do not have up-to-date antimalware software\ninstalled.",
+            "option3": "The endpoints have not been kept up-to-date with the latest\nsecurity patches.",
+            "option4": "Brute force attack."
+        },
+        "answer": "option3",
+        "answer_explanation": "The most likely reason endpoints have known operating system vulnerabilities is they do not have the latest patches installed from the vendors. Poorly configured antimalware software or a brute force attack would not cause this, and an APT might be the result of this situation but not the cause of it."
+    },
+    {
+        "question": "A network administrator found that one of the firewalls was no longer\nconfigured in accordance with recommended settings from DISA as it\nonce was. What is the most likely reason for this?",
+        "options": {
+            "option1": "The settings from DISA were incorrect.",
+            "option2": "Configuration management procedures for the device were not\nfollowed.",
+            "option3": "Privilege creep.",
+            "option4": "Data integrity."
+        },
+        "answer": "option2",
+        "answer_explanation": "The best answer is that it is most likely that someone changed a setting without the proper approval and documentation; therefore, CM procedures were not followed."
+    },
+    {
+        "question": "Mary isn’t sure if she is allowed to use her company-owned laptop to\nsend messages to her friend on Facebook. To find out if she can,\nwhich policy should she refer to?",
+        "options": {
+            "option1": "AUP",
+            "option2": "BYOD policy",
+            "option3": "Data handling policy",
+            "option4": "None of the above"
+        },
+        "answer": "option1",
+        "answer_explanation": "Of the choices provided, the AUP is the one most likely to provide guidance concerning whether or not Mary can use the company-owned laptop for nonbusiness use."
+    },
+    {
+        "question": "Of the policies listed, which one is most likely to provide guidance on\nconnecting a home computer to the work network via VPN?",
+        "options": {
+            "option1": "AUP",
+            "option2": "BYOD",
+            "option3": "Data handling policy",
+            "option4": "None of the above"
+        },
+        "answer": "option2",
+        "answer_explanation": "Of the choices provided, the BYOD policy is the best choice. The BYOD policy is used by organizations that want to allow their employees to use their personally owned devices to connect to the corporate network."
+    },
+    {
+        "question": "An employee notices a poster in the lunchroom reminding her about\nnot writing down her passwords but instead to use the companyprovided password vault software. What is this an example of?",
+        "options": {
+            "option1": "Security awareness",
+            "option2": "Security training",
+            "option3": "Security policy",
+            "option4": "Security testing\nANS: A. The use of posters and reminders in the workplace is an example\nof security awareness.\n\n59. What is the best reason to provide social engineering training to\nemployees?\nA. To show people how to perform a social engineering attack\nB. So employees can report security violations to management\nC. To teach people what to look out for\nD. None of the above"
+        },
+        "answer": "option3",
+        "answer_explanation": "The correct answer is to show people what kinds of things they should look out for as a way to defend against social engineering attacks."
+    },
+    {
+        "question": "During which phase of the incident response process is the incident\nresponse plan developed and documented?",
+        "options": {
+            "option1": "Preparation",
+            "option2": "Containment, eradication, and recovery",
+            "option3": "Detection and analysis",
+            "option4": "Post-incident activity"
+        },
+        "answer": "option1",
+        "answer_explanation": "The incident response plan is developed and documented during the preparation phase of the incident response process."
+    },
+    {
+        "question": "During which phase of the incident response process does the lessonslearned assessment take place?",
+        "options": {
+            "option1": "Detection and analysis",
+            "option2": "Containment, eradication, and recovery",
+            "option3": "Preparation",
+            "option4": "Post-incident activity"
+        },
+        "answer": "option4",
+        "answer_explanation": "The lessons-learned assessment occurs during the post-incident activity phase of the incident response process."
+    },
+    {
+        "question": "A security analyst is reviewing log files from a system to determine if\na security incident has occurred. This is an example of an activity that\ntakes place in which of the following incident response process\nphases?",
+        "options": {
+            "option1": "Containment, eradication, and recovery",
+            "option2": "Detection and analysis",
+            "option3": "Preparation",
+            "option4": "Post-incident activity"
+        },
+        "answer": "option2",
+        "answer_explanation": "Reviewing logs to determine if a security incident has occurred is an example of an activity that takes place in the detection and analysis phase of the incident response process."
+    },
+    {
+        "question": "In which phase of the incident response process would a security\nanalyst recover a system from a backup?",
+        "options": {
+            "option1": "Preparation",
+            "option2": "Detection and analysis",
+            "option3": "Post-incident activity",
+            "option4": "Containment, eradication, and recovery"
+        },
+        "answer": "option4",
+        "answer_explanation": "Recovering a system from backup would take place during the containment, eradication, and recovery phase of the incident response process."
+    },
+    {
+        "question": "What phase comes after the detection and analysis phase in the\nincident response process?",
+        "options": {
+            "option1": "Containment, eradication, and recovery.",
+            "option2": "Preparation.",
+            "option3": "Post-incident activity.",
+            "option4": "Detection and analysis is the last phase of the process."
+        },
+        "answer": "option1",
+        "answer_explanation": "The containment, eradication, and recovery phase comes after the detection and analysis phase of the incident response process. The process steps are Preparation -> Detection and Analysis -> Containment, Eradication, and Recovery -> Post-Incident Activity."
+    },
+    {
+        "question": "Carol is tasked with creating a business continuity plan for her\norganization. What should she do to determine which of her\norganization’s business functions should be restored in the event of an\nincident?",
+        "options": {
+            "option1": "Conduct a risk assessment.",
+            "option2": "Interview key stakeholders throughout the organization.",
+            "option3": "Calculate the MTD for each business function.",
+            "option4": "Conduct a business impact analysis."
+        },
+        "answer": "option4",
+        "answer_explanation": "The purpose of a business impact analysis is to determine which business functions should be restored after an incident."
+    },
+    {
+        "question": "Of the following which is the most likely reason(s) a business\ncontinuity program might fail?",
+        "options": {
+            "option1": "Failure to test the plan and procedures",
+            "option2": "Failure to document activation procedures",
+            "option3": "Failure to address the threats the organization is most likely to\nface",
+            "option4": "All of the above"
+        },
+        "answer": "option4",
+        "answer_explanation": "Failure to test the plan and procedures, document activation procedures, and address likely threats are all reasons the business continuity program may fail."
+    },
+    {
+        "question": "Alice is responsible for designing her organization’s datacenter to\nprovide resiliency in the event of a disaster. If a disaster occurs, she\nwants to have the new datacenter up and running within a few days,\nbut she does not want to incur the cost of building a full datacenter\nwith all equipment fully installed and configured. Which of the\nfollowing options is the best choice for her situation?",
+        "options": {
+            "option1": "Hot site",
+            "option2": "Warm site",
+            "option3": "Cold site",
+            "option4": "Tertiary site"
+        },
+        "answer": "option2",
+        "answer_explanation": "A warm site is a facility that is configured with equipment suitable for supporting IT operations but without the computing equipment itself. The warm site has power, HVAC, physical infrastructure, and possibly telecommunications and peripheral equipment."
+    },
+    {
+        "question": "Which of the following is the best example of a hot site?",
+        "options": {
+            "option1": "A facility that is configured with equipment suitable for supporting IT operations but without the computing equipment itself",
+            "option2": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed and\nconfigured",
+            "option3": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed but not\nconfigured",
+            "option4": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed and configured, but the equipment is not powered on"
+        },
+        "answer": "option2",
+        "answer_explanation": "A hot site is a facility that is configured with equipment suitable for supporting IT operations and has the computing equipment"
+    },
+    {
+        "question": "Which of the following is the best example of a cold site?",
+        "options": {
+            "option1": "A facility that is configured with equipment suitable for supporting IT operations but without the computing equipment itself",
+            "option2": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed and configured",
+            "option3": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed but not\nconfigured",
+            "option4": "A facility that is configured with equipment suitable for supporting IT operations and has the computing equipment installed and configured, but the equipment is not powered on"
+        },
+        "answer": "option1",
+        "answer_explanation": "A cold site is a facility that is configured with equipment suitable"
+    }
+]
