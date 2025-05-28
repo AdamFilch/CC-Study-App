@@ -7,8 +7,7 @@ export function FlashCardsHeader() {
     return (
         <Fragment>
         <View style={{
-            paddingTop: 10,
-            paddingBottom: 10,
+            paddingVertical: 12,
             paddingHorizontal: 10,
             display: 'flex',
             flexDirection: 'row',
