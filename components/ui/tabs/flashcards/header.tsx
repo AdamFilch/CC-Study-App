@@ -1,17 +1,20 @@
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Fragment } from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
 
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export function FlashCardsHeader() {
     return (
+        <Fragment>
         <View style={{
-            paddingTop: 45,
+            paddingTop: 10,
             paddingBottom: 10,
             paddingHorizontal: 10,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            alignItems: 'center',
         }}>
             <View>
                 <TouchableOpacity
@@ -29,7 +32,7 @@ export function FlashCardsHeader() {
             </View>
             <Text style={{
                 fontSize: 20,
-                fontWeight: 600
+                fontWeight: 600,
             }}>
                 Flashcards
             </Text>
@@ -49,5 +52,7 @@ export function FlashCardsHeader() {
                 </TouchableOpacity>
             </View>
         </View>
+        </Fragment>
+
     )
 }

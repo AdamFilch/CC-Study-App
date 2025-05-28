@@ -1,15 +1,15 @@
-import { FlashCardsHeader } from "@/components/ui/tabs/flashcards/header";
-import { ScrollView, Text } from "react-native";
+import { SafeAreaView } from 'react-native';
 
-
+import { FlashcardsContent } from '@/components/ui/tabs/flashcards/content';
+import { FlashCardsHeader } from '@/components/ui/tabs/flashcards/header';
 
 export default function FlashcardsPage() {
     return (
-        <ScrollView>
+        <SafeAreaView style={{
+            flex: 1
+        }}>
             <FlashCardsHeader />
-            <Text>
-                Flashcards Page
-            </Text>
-        </ScrollView>
+            <FlashcardsContent />
+        </SafeAreaView>
     )
 }
