@@ -14,7 +14,18 @@ export function QuizContent() {
             flexDirection: 'column'
         }}>
             <QuizCard data={QUIZ[quizIndex]} />
-            <QuizButtons />
+            <QuizButtons 
+            onClickNext={() => {
+                    if (quizIndex < QUIZ.length) {
+                        setQuizIndex(prev => prev + 1)
+                    }
+                }}
+                onClickBack={() => {
+                    if (quizIndex > 0) {
+                        setQuizIndex(prev => prev - 1)
+                    }
+                }}
+                />
         </View>
     )
 }
@@ -96,8 +107,13 @@ function QuizCard({
     )
 }
 
-function QuizButtons() {
-
+function QuizButtons({
+    onClickNext,
+    onClickBack,
+}: {
+    onClickNext: () => void
+    onClickBack: () => void
+}) {
 
     const buttonStyle: StyleProp<ViewStyle> = {
         backgroundColor: '#FFF',
@@ -116,17 +132,24 @@ function QuizButtons() {
             marginHorizontal: 10,
             height: 50,
             marginBottom: 60,
-            alignSelf: 'center'
+            alignSelf: 'flex-end'
         }}>
-            <TouchableOpacity style={[
-                buttonStyle
-            ]}>
-                <Text>Back</Text>
+            <TouchableOpacity
+                style={[buttonStyle,]}
+                onPress={onClickBack}
+
+            >
+                <Text>
+                    Back
+                </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[
-                buttonStyle
-            ]}>
-                <Text>Continue</Text>
+            <TouchableOpacity
+                style={[buttonStyle]}
+                onPress={onClickNext}
+            >
+                <Text>
+                    Continue
+                </Text>
             </TouchableOpacity>
         </View>
     )
