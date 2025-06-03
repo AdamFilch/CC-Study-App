@@ -5,6 +5,7 @@ import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native
 
 export function QuizContent() {
     const [quizIndex, setQuizIndex] = useState<number>(3)
+    const [answers, setAnswers] = useState<boolean[]>(new Array(QUIZ.length).fill(null))
 
 
     return (
@@ -31,25 +32,62 @@ function QuizCard({
             backgroundColor: 'white',
             margin: 15,
             padding: 14,
-            borderRadius: 2
+            borderRadius: 2,
         }}>
             <View style={{
                 alignItems: 'center',
-                paddingBottom: 15
+                paddingBottom: 15,
+                paddingHorizontal: 15,
+                paddingVertical: 20,
+                flex: 1,
+                alignContent: 'flex-end'
             }}>
-                <Text>
+                <Text style={{
+                    fontSize: 24,
+                    alignItems: 'baseline'
+                }}>
                     {data.question}
                 </Text>
             </View>
-            <View>
+            <View style={{
+                paddingHorizontal: 15,
+                gap: 20,
+            }}>
                 {Object.entries(data.options).map(([option, desc], idx) => {
 
                     return (
-                        <View key={option}>
-                            <Text>
-                                {desc}
-                            </Text>
-                        </View>
+                        <TouchableOpacity key={option}
+                            style={{
+                                backgroundColor: 'lightgray',
+                                height: 60,
+                                borderRadius: 5
+                            }}>
+                            <View style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                gap: 20,
+                                marginVertical: 'auto',
+                                alignItems: 'center',
+                            }}>
+                                <View style={{
+                                    marginLeft: 10,
+                                    height: 40,
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    aspectRatio: 1,
+                                    backgroundColor: 'gray',
+                                    borderRadius: 5
+                                }}>
+                                    <Text >
+                                        {option.split('option')[1]}
+                                    </Text>
+
+                                </View>
+                                <Text>
+                                    {desc}
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
                     )
                 })}
             </View>
@@ -80,6 +118,11 @@ function QuizButtons() {
             marginBottom: 60,
             alignSelf: 'center'
         }}>
+            <TouchableOpacity style={[
+                buttonStyle
+            ]}>
+                <Text>Back</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={[
                 buttonStyle
             ]}>
