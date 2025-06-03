@@ -70,7 +70,7 @@ function QuizCard({
                         <TouchableOpacity key={option}
                             style={{
                                 backgroundColor: 'lightgray',
-                                height: 60,
+                                padding: 10,
                                 borderRadius: 5
                             }}>
                             <View style={{
@@ -79,13 +79,14 @@ function QuizCard({
                                 gap: 20,
                                 marginVertical: 'auto',
                                 alignItems: 'center',
+                                
                             }}>
                                 <View style={{
                                     marginLeft: 10,
                                     height: 40,
+                                    width: 40,
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    aspectRatio: 1,
                                     backgroundColor: 'gray',
                                     borderRadius: 5
                                 }}>
@@ -94,9 +95,18 @@ function QuizCard({
                                     </Text>
 
                                 </View>
-                                <Text>
+                                <View style={{
+                                    flex: 1,
+                                    marginRight: 10
+                                }}>
+                                <Text style={{
+                                    flexWrap: 'wrap',
+                                    flexShrink: 1,
+                                    fontSize: 17
+                                }}>
                                     {desc}
                                 </Text>
+                                </View>
                             </View>
                         </TouchableOpacity>
                     )
