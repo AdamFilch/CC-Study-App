@@ -1,7 +1,7 @@
 import { Quiz } from "@/types/Quiz";
 import QUIZ from 'json/170+ ISC2 CC Dump Questions.json';
 import { useState } from "react";
-import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 
 export function QuizContent() {
     const [quizIndex, setQuizIndex] = useState<number>(3)
@@ -45,8 +45,7 @@ function QuizCard({
             padding: 14,
             borderRadius: 2,
         }}>
-            <View style={{
-                alignItems: 'center',
+            <ScrollView style={{
                 paddingBottom: 15,
                 paddingHorizontal: 15,
                 paddingVertical: 20,
@@ -55,11 +54,12 @@ function QuizCard({
             }}>
                 <Text style={{
                     fontSize: 24,
-                    alignItems: 'baseline'
+                    alignItems: 'baseline',
+                    overflowX: 'scroll'
                 }}>
                     {data.question}
                 </Text>
-            </View>
+            </ScrollView>
             <View style={{
                 paddingHorizontal: 15,
                 gap: 20,

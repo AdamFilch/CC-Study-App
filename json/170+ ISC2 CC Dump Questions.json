@@ -420,7 +420,7 @@
         "answer": "Man-in-the-middle (MITM) attack"
     },
     {
-        "question": "Which type of malware encrypts a user's files and demands payment in exchange for the decryption key? a. Ransomware",
+        "question": "Which type of malware encrypts a user's files and demands payment in exchange for the decryption key?",
         "options": {
             "option1": "Ransomware",
             "option2": "Worm",
