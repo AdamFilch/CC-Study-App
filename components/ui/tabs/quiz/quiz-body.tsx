@@ -6,16 +6,16 @@ import { ScrollView, StyleProp, Text, TouchableOpacity, View, ViewStyle } from "
 export function QuizContent() {
     const [quizIndex, setQuizIndex] = useState<number>(3)
     const [answers, setAnswers] = useState<boolean[]>(new Array(QUIZ.length).fill(null))
-
+    const [isAnsRevealed, setIsAnsRevealed] = useState<boolean>(false)
 
     return (
         <View style={{
             flex: 1,
             flexDirection: 'column'
         }}>
-            <QuizCard data={QUIZ[quizIndex]} />
-            <QuizButtons 
-            onClickNext={() => {
+            <QuizCard data={QUIZ[quizIndex]} isAnsRevealed={isAnsRevealed} />
+            <QuizButtons
+                onClickNext={() => {
                     if (quizIndex < QUIZ.length) {
                         setQuizIndex(prev => prev + 1)
                     }
@@ -25,17 +25,39 @@ export function QuizContent() {
                         setQuizIndex(prev => prev - 1)
                     }
                 }}
-                />
+                onClickReveal={() => {
+                    const updated = !isAnsRevealed
+                    setIsAnsRevealed(updated)
+                }}
+            />
         </View>
     )
 }
 
 
 function QuizCard({
-    data
+    data,
+    isAnsRevealed
 }: {
-    data: Quiz
+    data: Quiz,
+    isAnsRevealed: boolean
 }) {
+
+    const nuselectedOption: StyleProp<ViewStyle> = {
+
+    }
+
+    const selectedOption: StyleProp<ViewStyle> = {
+        
+    }
+
+    const correctOption: StyleProp<ViewStyle> = {
+        
+    }
+
+    const incorrectOption: StyleProp<ViewStyle> = {
+        
+    }
 
     return (
         <View style={{
@@ -65,11 +87,10 @@ function QuizCard({
                 gap: 20,
             }}>
                 {Object.entries(data.options).map(([option, desc], idx) => {
-
-                    return (
-                        <TouchableOpacity key={option}
+                    if (isAnsRevealed && data.answer == desc) {
+                        return <View key={option}
                             style={{
-                                backgroundColor: 'lightgray',
+                                backgroundColor: 'green',
                                 padding: 10,
                                 borderRadius: 5
                             }}>
@@ -79,7 +100,7 @@ function QuizCard({
                                 gap: 20,
                                 marginVertical: 'auto',
                                 alignItems: 'center',
-                                
+
                             }}>
                                 <View style={{
                                     marginLeft: 10,
@@ -99,13 +120,60 @@ function QuizCard({
                                     flex: 1,
                                     marginRight: 10
                                 }}>
-                                <Text style={{
-                                    flexWrap: 'wrap',
-                                    flexShrink: 1,
-                                    fontSize: 17
+                                    <Text style={{
+                                        flexWrap: 'wrap',
+                                        flexShrink: 1,
+                                        fontSize: 17,
+                                        color: 'black'
+                                    }}>
+                                        {desc}
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                    }
+
+                    return (
+                        <TouchableOpacity key={option}
+                            style={{
+                                backgroundColor: 'lightgray',
+                                padding: 10,
+                                borderRadius: 5
+                            }}>
+                            <View style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                gap: 20,
+                                marginVertical: 'auto',
+                                alignItems: 'center',
+
+                            }}>
+                                <View style={{
+                                    marginLeft: 10,
+                                    height: 40,
+                                    width: 40,
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    backgroundColor: 'gray',
+                                    borderRadius: 5
                                 }}>
-                                    {desc}
-                                </Text>
+                                    <Text >
+                                        {option.split('option')[1]}
+                                    </Text>
+
+                                </View>
+                                <View style={{
+                                    flex: 1,
+                                    marginRight: 10
+                                }}>
+                                    <Text style={{
+                                        flexWrap: 'wrap',
+                                        flexShrink: 1,
+                                        fontSize: 17,
+                                        color: 'black'
+                                    }}>
+                                        {desc}
+                                    </Text>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -120,9 +188,11 @@ function QuizCard({
 function QuizButtons({
     onClickNext,
     onClickBack,
+    onClickReveal,
 }: {
     onClickNext: () => void
     onClickBack: () => void
+    onClickReveal: () => void
 }) {
 
     const buttonStyle: StyleProp<ViewStyle> = {
@@ -154,11 +224,21 @@ function QuizButtons({
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity
+                style={[buttonStyle, {
+                    flex: 3,
+                }]}
+                onPress={onClickReveal}
+            >
+                <Text>
+                    Reveal
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
                 style={[buttonStyle]}
                 onPress={onClickNext}
             >
                 <Text>
-                    Continue
+                    Next
                 </Text>
             </TouchableOpacity>
         </View>

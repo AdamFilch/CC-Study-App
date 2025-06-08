@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from 'react-native';
 
 import { Flashcard } from '@/types/Flashcards';
-import { MaterialIcons } from '@expo/vector-icons';
 
 export function FlashcardsContent() {
     const [cardIndex, setCardIndex] = useState<number>(0)
@@ -16,7 +15,14 @@ export function FlashcardsContent() {
             flexDirection: 'column',
             height: '100%'
         }}>
-            <FlashcardCard data={FLASHCARDS[cardIndex]} isFlipped={flippers[cardIndex]} />
+            <FlashcardCard
+                data={FLASHCARDS[cardIndex]}
+                isFlipped={flippers[cardIndex]}
+                onClickFlip={() => {
+                    const updated = [...flippers];
+                    updated[cardIndex] = !updated[cardIndex];
+                    setFlippers(updated);
+                }} />
             <FlashcardButtons
                 onClickNext={() => {
                     if (cardIndex < FLASHCARDS.length) {
@@ -28,11 +34,6 @@ export function FlashcardsContent() {
                         setCardIndex(prev => prev - 1)
                     }
                 }}
-                onClickFlip={() => {
-                    const updated = [...flippers]; 
-                    updated[cardIndex] = !updated[cardIndex]; 
-                    setFlippers(updated); 
-                }}
             />
         </View>
     )
@@ -41,10 +42,12 @@ export function FlashcardsContent() {
 
 function FlashcardCard({
     data,
-    isFlipped
+    isFlipped,
+    onClickFlip
 }: {
     data: Flashcard,
-    isFlipped: boolean
+    isFlipped: boolean,
+    onClickFlip: () => void
 }) {
 
     function colorCatogory(cat: string) {
@@ -77,7 +80,7 @@ function FlashcardCard({
 
             </View>
             {isFlipped ? (
-                <View style={{
+                <TouchableOpacity onPress={onClickFlip} style={{
                     flex: 1,
                     opacity: 0.7,
                     backgroundColor: '#F6BD60',
@@ -91,10 +94,10 @@ function FlashcardCard({
                     }}>
                         {data.answer}
                     </Text>
-                </View>
+                </TouchableOpacity>
 
             ) : (
-                <View style={{
+                <TouchableOpacity onPress={onClickFlip} style={{
                     flex: 1,
                     paddingHorizontal: 30,
                     opacity: 0.7,
@@ -109,7 +112,7 @@ function FlashcardCard({
                     }}>
                         {data.question}
                     </Text>
-                </View>
+                </TouchableOpacity>
             )}
         </View>
     )
@@ -118,11 +121,9 @@ function FlashcardCard({
 function FlashcardButtons({
     onClickNext,
     onClickBack,
-    onClickFlip
 }: {
     onClickNext: () => void
     onClickBack: () => void
-    onClickFlip: () => void
 }) {
 
     const buttonStyle: StyleProp<ViewStyle> = {
@@ -162,16 +163,10 @@ function FlashcardButtons({
                 onPress={onClickNext}
             >
                 <Text>
-                    Continue
+                    Next
                 </Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                onPress={onClickFlip}
-                style={[buttonStyle, {
-                    flex: 1
-                }]}>
-                <MaterialIcons name="flip" size={24} color="black" />
-            </TouchableOpacity>
+
         </View>
     )
 }
