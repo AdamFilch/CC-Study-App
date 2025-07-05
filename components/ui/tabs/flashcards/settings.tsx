@@ -44,6 +44,9 @@ function FlashcardSettings() {
     return (
         <View>
             <View>
+                Just Practice
+            </View>
+            <View>
                 <Text>Cards show </Text><Text>Description / Term</Text><Text> first</Text>
                 <Text>Cards are flipped randomly</Text>
                 <Text>Shuffle</Text>
