@@ -1,7 +1,7 @@
-import { SafeAreaView } from 'react-native';
-
 import { FlashcardsContent } from '@/components/ui/tabs/flashcards/content';
 import { FlashCardsHeader } from '@/components/ui/tabs/flashcards/header';
+import { SafeAreaView } from 'react-native';
+
 
 export default function FlashcardsPage() {
     return (
@@ -10,6 +10,8 @@ export default function FlashcardsPage() {
         }}>
             <FlashCardsHeader />
             <FlashcardsContent />
+
+            {/* <FlashcardsMainLanding /> */}
         </SafeAreaView>
     )
 }
