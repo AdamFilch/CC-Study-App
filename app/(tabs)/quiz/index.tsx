@@ -1,5 +1,4 @@
-import { QuizHeader } from "@/components/ui/tabs/quiz/header";
-import { QuizContent } from "@/components/ui/tabs/quiz/quiz-body";
+import { QuizMainLandingPage } from "@/components/ui/tabs/quiz/settings";
 import { SafeAreaView } from "react-native";
 
 
@@ -8,8 +7,9 @@ export default function QuizPage() {
         <SafeAreaView style={{
             flex: 1
         }}>
-            <QuizHeader />
-            <QuizContent />
+            {/* <QuizHeader />
+            <QuizContent /> */}
+            <QuizMainLandingPage />
         </SafeAreaView>
     )
 }

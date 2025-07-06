@@ -1,76 +1,153 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
- export function QuizMainLandingPage() {
+export function QuizMainLandingPage() {
     return (
         <View style={{
-                    flex: 1,
-                    flexDirection: 'column',
-                    height: '100%',
-                    backgroundColor: '#FFF'
-                }}>
-                    <View style={{
-                        flex: 1,
-                    }}>
-        
-        
-                    </View>
-        
-                    <View style={{
-                        // flex: 1,
-                        marginBottom: 60,
-                        paddingHorizontal: 30,
-                    }}>
-                        <TouchableOpacity style={{
-                            borderRadius: 5,
-        
-                            height: 60,
-                            opacity: 0.7,
-                            backgroundColor: '#F6BD60',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }} >
-                            <Text>
-                                Begin
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-    )
- }
+            flex: 1,
+            flexDirection: 'column',
+            height: '100%',
+            backgroundColor: '#FFF'
+        }}>
+            <View style={{
+                flex: 1,
+            }}>
+                <QuizSettings />
 
+            </View>
 
- function QuizSettings() {
-    return(
-        <View>
-            <Text>
-                Just Practice
-            </Text>
-            <View>
-                <Text>Scoring</Text>
-                <Text>Total Number of Questions</Text>
-                <Text>Passing Score</Text>    
+            <View style={{
+                // flex: 1,
+                marginBottom: 60,
+                paddingHorizontal: 30,
+            }}>
+                <TouchableOpacity style={{
+                    borderRadius: 5,
+
+                    height: 60,
+                    opacity: 0.7,
+                    backgroundColor: '#F6BD60',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }} >
+                    <Text>
+                        Begin
+                    </Text>
+                </TouchableOpacity>
             </View>
-            <Text>
-                <Text>Timer</Text>
-                <Text>15 Min</Text><Text>Per Question / Full Time</Text>
-                <Text>No Timer</Text>
-            </Text>
-            <View>
-            <Text>Display</Text>
-            <Text>Reveal answer in</Text><Text>Every step / Completion</Text>
-            <Text>Progress Tracker</Text>
-            </View>
-            <View>
-                <Text>Select Chapters</Text>
-                <View>
-                    <Text>Chapter 1 - Security Principles</Text>
-                    <Text>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
-                    <Text>Chapter 3 - Access Control Concepts</Text>
-                    <Text>Chapter 4 - Network Security</Text>
-                    <Text>Chapter 5 - Security Operations</Text>
-                </View>
-            </View>
-            
         </View>
     )
- }
+}
+
+
+function QuizSettings() {
+
+    const spacedTitleAndButton: StyleProp<ViewStyle> = {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        alignItems: 'center'
+    }
+
+    const settingDescription: StyleProp<TextStyle> = {
+        maxWidth: 280,
+        fontSize: 16,
+        fontWeight: 600
+    }
+
+    const chaptersStyle: StyleProp<ViewStyle> = {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 20
+    }
+
+    return (
+        <View style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 10,
+        }}>
+            <View >
+                <Text>Scoring</Text>
+                <View>
+                    <Text>Total Number of Questions</Text>
+                    <TextInput
+                        keyboardType="numeric"
+                    />
+                </View>
+                <View>
+                    <Text>Passing Score</Text>
+                    <TextInput
+                        keyboardType="numeric"
+                    />
+                </View>
+            </View>
+            <View style={[chaptersStyle]}>
+                <Text>Timer</Text>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row'
+                }}>
+                <Text>15 Min</Text><TouchableOpacity><Text>Per Question</Text></TouchableOpacity><TouchableOpacity><Text>Full Time</Text></TouchableOpacity>
+
+                </View>
+                <View style={[spacedTitleAndButton, {
+
+                }]}>
+                    <Text style={[settingDescription]}>No Timer</Text>
+                    <Switch
+
+                    />
+                </View>
+            </View>
+            <View style={[chaptersStyle]}>
+                <Text>Display</Text>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row'
+                }}>
+                <Text>Reveal answer in</Text><TouchableOpacity><Text>Every Step</Text></TouchableOpacity><TouchableOpacity><Text>Completion</Text></TouchableOpacity>
+
+                </View>
+                <View style={[spacedTitleAndButton, {
+
+                }]}>
+                    <Text style={[settingDescription]}>Progress Tracker</Text>
+                    <Switch
+
+                    />
+                </View>
+            </View>
+            <View style={[chaptersStyle]}>
+                <Text>Select Chapters</Text>
+                <View>
+                    <View style={[spacedTitleAndButton]}>
+                        <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
+                        <Switch />
+                    </View>
+                    <View style={[spacedTitleAndButton]}>
+                        <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
+                        <Switch />
+
+                    </View>
+                    <View style={[spacedTitleAndButton]}>
+                        <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
+                        <Switch />
+
+                    </View>
+                    <View style={[spacedTitleAndButton]}>
+                        <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
+                        <Switch />
+
+                    </View>
+                    <View style={[spacedTitleAndButton]}>
+                        <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
+                        <Switch />
+
+                    </View>
+                </View>
+            </View>
+
+        </View>
+    )
+}
