@@ -1,4 +1,7 @@
+
+import Checkbox from 'expo-checkbox';
 import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+
 
 export function QuizMainLandingPage() {
     return (
@@ -88,7 +91,7 @@ function QuizSettings() {
                     display: 'flex',
                     flexDirection: 'row'
                 }}>
-                <Text>15 Min</Text><TouchableOpacity><Text>Per Question</Text></TouchableOpacity><TouchableOpacity><Text>Full Time</Text></TouchableOpacity>
+                    <Text>15 Min</Text><TouchableOpacity><Text>Per Question</Text></TouchableOpacity><TouchableOpacity><Text>Full Time</Text></TouchableOpacity>
 
                 </View>
                 <View style={[spacedTitleAndButton, {
@@ -106,7 +109,7 @@ function QuizSettings() {
                     display: 'flex',
                     flexDirection: 'row'
                 }}>
-                <Text>Reveal answer in</Text><TouchableOpacity><Text>Every Step</Text></TouchableOpacity><TouchableOpacity><Text>Completion</Text></TouchableOpacity>
+                    <Text>Reveal answer in</Text><TouchableOpacity><Text>Every Step</Text></TouchableOpacity><TouchableOpacity><Text>Completion</Text></TouchableOpacity>
 
                 </View>
                 <View style={[spacedTitleAndButton, {
@@ -123,26 +126,36 @@ function QuizSettings() {
                 <View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
-                        <Switch />
+                        <Checkbox
+                            disabled={false}
+                        />
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
-                        <Switch />
+                        <Checkbox
+                            disabled={false}
+                        />
 
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
-                        <Switch />
+                        <Checkbox
+                            disabled={false}
+                        />
 
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
-                        <Switch />
+                        <Checkbox
+                            disabled={false}
+                        />
 
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
-                        <Switch />
+                        <Checkbox
+                            disabled={false}
+                        />
 
                     </View>
                 </View>
