@@ -69,6 +69,7 @@ function QuizSettings() {
             display: 'flex',
             flexDirection: 'column',
             gap: 10,
+            padding: 20
         }}>
             <View >
                 <Text>Scoring</Text>
