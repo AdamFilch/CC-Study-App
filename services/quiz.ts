@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 
-type quizStates = {
+type QuizStates = {
     topics: {
         chapter1: boolean,
         chapter2: boolean,
@@ -17,16 +17,16 @@ type quizStates = {
     progress_tracker: boolean,
 }
 
-type quizActions = {
+type QuizActions = {
 
 }
 
-const useQuizStore = create<quizStates & quizActions>((set, get) => ({
+const useQuizStore = create<QuizStates & QuizActions>((set, get) => ({
     topics: {
-        chapter1: false,
-        chapter2: false,
-        chapter3: false,
-        chapter4: false,
+        chapter1: true,
+        chapter2: true,
+        chapter3: true,
+        chapter4: true,
     },
     total_questions: '100',
     passing_score: '70',
