@@ -1,4 +1,5 @@
 
+import { useQuizStore } from '@/services/quiz';
 import Checkbox from 'expo-checkbox';
 import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
@@ -44,13 +45,17 @@ export function QuizMainLandingPage() {
 
 function QuizSettings() {
 
+    const {
+        topics
+    } = useQuizStore()
+
     const spacedTitleAndButton: StyleProp<ViewStyle> = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
         alignItems: 'center'
-    }
+    }   
 
     const settingDescription: StyleProp<TextStyle> = {
         maxWidth: 280,
@@ -129,12 +134,16 @@ function QuizSettings() {
                         <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter1}
+
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter2}
+
                         />
 
                     </View>
@@ -142,6 +151,8 @@ function QuizSettings() {
                         <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter3}
+
                         />
 
                     </View>
@@ -149,6 +160,8 @@ function QuizSettings() {
                         <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter4}
+
                         />
 
                     </View>
@@ -156,6 +169,7 @@ function QuizSettings() {
                         <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter5}
                         />
 
                     </View>

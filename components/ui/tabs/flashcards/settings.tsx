@@ -1,3 +1,4 @@
+import { useFlashcardsStore } from "@/services/flashcards";
 import Checkbox from "expo-checkbox";
 import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
@@ -43,6 +44,10 @@ export function FlashcardsMainLanding() {
 
 function FlashcardSettings() {
 
+    const {
+        topics
+    } = useFlashcardsStore()
+
     const spacedTitleAndButton: StyleProp<ViewStyle> = {
         display: 'flex',
         flexDirection: 'row',
@@ -72,7 +77,9 @@ function FlashcardSettings() {
             padding: 20
         }}>
             <View>
+                <Text>
                 Just Practice
+                </Text>
             </View>
             <View>
                 <View>
@@ -122,6 +129,8 @@ function FlashcardSettings() {
                         <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter1}
+
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
@@ -129,12 +138,16 @@ function FlashcardSettings() {
                         <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter2}
+
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter3}
+
                         />
                     </View>
 
@@ -142,6 +155,8 @@ function FlashcardSettings() {
                         <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter4}
+
                         />
                     </View>
 
@@ -149,6 +164,8 @@ function FlashcardSettings() {
                         <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
                         <Checkbox
                             disabled={false}
+                            value={topics.chapter5}
+
                         />
                     </View>
 

@@ -12,7 +12,8 @@ type FlashcardsStates = {
         chapter1: boolean,
         chapter2: boolean,
         chapter3: boolean,
-        chapter4: boolean
+        chapter4: boolean,
+        chapter5: boolean,
     }
 }
 
@@ -20,12 +21,13 @@ type FlashcardsActions = {
 
 }
 
-const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((set, get) => ({
+export const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((set, get) => ({
     topics: {
         chapter1: true,
         chapter2: true,
         chapter3: true,
         chapter4: true,
+        chapter5: true
     },
     show_first: 'definition',
     flipped_randomly: false,
