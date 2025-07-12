@@ -18,7 +18,8 @@ type FlashcardsStates = {
 }
 
 type FlashcardsActions = {
-
+    setField<K extends keyof Omit<FlashcardsStates, "topics">>(key: K, value: FlashcardsStates[K]): void;
+    setTopic: (chapter: keyof FlashcardsStates["topics"], value: boolean) => void;
 }
 
 export const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((set, get) => ({
@@ -35,5 +36,29 @@ export const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((
     display_chapter_category: true,
     progress_tracker: true,
     endless: false,
-    card_limit: '50'
+    card_limit: '50',
+
+
+    setField: (key, value) => {
+        console.log('FieldChange', { key, value })
+
+        set(state => ({
+            ...state,
+            [key]: value
+        }))
+
+    },
+
+    setTopic: (chapter, value) => {
+        console.log('ChapterChange', { chapter, value })
+
+        set(state => ({
+
+
+            topics: {
+                ...state.topics,
+                [chapter]: value
+            }
+        }))
+    }
 }))

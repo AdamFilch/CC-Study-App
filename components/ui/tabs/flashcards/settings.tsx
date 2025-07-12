@@ -45,7 +45,14 @@ export function FlashcardsMainLanding() {
 function FlashcardSettings() {
 
     const {
-        topics
+        topics,
+        progress_tracker,
+        display_chapter_category,
+        shuffle,
+        endless,
+        flipped_randomly,
+        setField,
+        setTopic,
     } = useFlashcardsStore()
 
     const spacedTitleAndButton: StyleProp<ViewStyle> = {
@@ -78,7 +85,7 @@ function FlashcardSettings() {
         }}>
             <View>
                 <Text>
-                Just Practice
+                    Just Practice
                 </Text>
             </View>
             <View>
@@ -89,12 +96,20 @@ function FlashcardSettings() {
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Cards are flipped randomly</Text>
                     <Switch
+                        value={flipped_randomly}
+                        onValueChange={(v) => {
+                            setField('flipped_randomly', v)
+                        }}
+
                     />
                 </View>
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Shuffle</Text>
                     <Switch
-
+                        value={shuffle}
+                        onValueChange={(v) => {
+                            setField('shuffle', v)
+                        }}
                     />
                 </View>
 
@@ -103,20 +118,28 @@ function FlashcardSettings() {
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Display Chapter and Category</Text>
                     <Switch
-
+                        value={display_chapter_category}
+                        onValueChange={(v) => {
+                            setField('display_chapter_category', v)
+                        }}
                     />
                 </View>
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Display Progress Tracker</Text>
                     <Switch
-
+                        value={progress_tracker}
+                        onValueChange={(v) => {
+                            setField('progress_tracker', v)
+                        }}
                     />
                 </View>
             </View>
             <View>
                 <View style={[spacedTitleAndButton]}>
-                <Text style={[settingDescription]}>Repeat Endlessly</Text>
-                <Switch />
+                    <Text style={[settingDescription]}>Repeat Endlessly</Text>
+                    <Switch value={endless} onValueChange={(v) => {
+                        setField('endless', v)
+                    }} />
                 </View>
                 <Text>Limit to </Text><TextInput
                     keyboardType="numeric"
@@ -130,7 +153,9 @@ function FlashcardSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter1}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter1', v)
+                            }}
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
@@ -139,7 +164,9 @@ function FlashcardSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter2}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter2', v)
+                            }}
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
@@ -147,7 +174,9 @@ function FlashcardSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter3}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter3', v)
+                            }}
                         />
                     </View>
 
@@ -156,7 +185,10 @@ function FlashcardSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter4}
-
+                            onValueChange={(v) => {
+                                console.log('ChapterChange', v)
+                                setTopic('chapter4', v)
+                            }}
                         />
                     </View>
 
@@ -165,7 +197,9 @@ function FlashcardSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter5}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter5', v)
+                            }}
                         />
                     </View>
 
