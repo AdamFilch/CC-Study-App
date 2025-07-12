@@ -40,7 +40,6 @@ export const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((
 
 
     setField: (key, value) => {
-        console.log('FieldChange', { key, value })
 
         set(state => ({
             ...state,
@@ -50,7 +49,6 @@ export const useFlashcardsStore = create<FlashcardsActions & FlashcardsStates>((
     },
 
     setTopic: (chapter, value) => {
-        console.log('ChapterChange', { chapter, value })
 
         set(state => ({
 
