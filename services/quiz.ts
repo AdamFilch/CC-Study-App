@@ -19,8 +19,9 @@ type QuizStates = {
 }
 
 type QuizActions = {
-
-}
+    setField<K extends keyof Omit<QuizStates, "topics">>(key: K, value: QuizStates[K]): void;
+    setTopic: (chapter: keyof QuizStates["topics"], value: boolean) => void;
+};
 
 export const useQuizStore = create<QuizStates & QuizActions>((set, get) => ({
     topics: {
@@ -36,7 +37,17 @@ export const useQuizStore = create<QuizStates & QuizActions>((set, get) => ({
     timer_type: 'full_time',
     no_timer: false,
     reveal_type: 'every_step',
-    progress_tracker: true
+    progress_tracker: true,
 
+    setField: (key, value) => set(state => ({
+        ...state,
+        [key]: value
+    })),
 
+    setTopic: (chapter, value) => set(state => ({
+        topics: {
+            ...state.topics,
+            [chapter]: value
+        }
+    }))
 }))

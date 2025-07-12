@@ -46,7 +46,16 @@ export function QuizMainLandingPage() {
 function QuizSettings() {
 
     const {
-        topics
+        topics,
+        total_questions,
+        passing_score,
+        timer,
+        timer_type,
+        no_timer,
+        reveal_type,
+        progress_tracker,
+        setTopic,
+        setField
     } = useQuizStore()
 
     const spacedTitleAndButton: StyleProp<ViewStyle> = {
@@ -55,7 +64,7 @@ function QuizSettings() {
         justifyContent: 'space-between',
         width: '100%',
         alignItems: 'center'
-    }   
+    }
 
     const settingDescription: StyleProp<TextStyle> = {
         maxWidth: 280,
@@ -105,7 +114,10 @@ function QuizSettings() {
                 }]}>
                     <Text style={[settingDescription]}>No Timer</Text>
                     <Switch
-
+                        value={no_timer}
+                        onValueChange={(v) => {
+                            setField('no_timer', v)
+                        }}
                     />
                 </View>
             </View>
@@ -123,7 +135,10 @@ function QuizSettings() {
                 }]}>
                     <Text style={[settingDescription]}>Progress Tracker</Text>
                     <Switch
-
+                        value={progress_tracker}
+                        onValueChange={(v) => {
+                            setField('progress_tracker', v)
+                        }}
                     />
                 </View>
             </View>
@@ -135,7 +150,9 @@ function QuizSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter1}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter1', v)
+                            }}
                         />
                     </View>
                     <View style={[spacedTitleAndButton]}>
@@ -143,7 +160,9 @@ function QuizSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter2}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter2', v)
+                            }}
                         />
 
                     </View>
@@ -152,7 +171,9 @@ function QuizSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter3}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter3', v)
+                            }}
                         />
 
                     </View>
@@ -161,7 +182,9 @@ function QuizSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter4}
-
+                            onValueChange={(v) => {
+                                setTopic('chapter4', v)
+                            }}
                         />
 
                     </View>
@@ -170,6 +193,9 @@ function QuizSettings() {
                         <Checkbox
                             disabled={false}
                             value={topics.chapter5}
+                            onValueChange={(v) => {
+                                setTopic('chapter5', v)
+                            }}
                         />
 
                     </View>
