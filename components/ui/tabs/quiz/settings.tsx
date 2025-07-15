@@ -1,4 +1,5 @@
 
+import { TwoChoiceButton } from '@/components/common/two-choice-button';
 import { useQuizStore } from '@/services/quiz';
 import Checkbox from 'expo-checkbox';
 import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
@@ -104,9 +105,11 @@ function QuizSettings() {
                 <Text>Timer</Text>
                 <View style={{
                     display: 'flex',
-                    flexDirection: 'row'
+                    flexDirection: 'row',
+                    alignItems: 'center'
                 }}>
-                    <Text>15 Min</Text><TouchableOpacity><Text>Per Question</Text></TouchableOpacity><TouchableOpacity><Text>Full Time</Text></TouchableOpacity>
+                    <Text>15 Min{" "}</Text>
+                    <TwoChoiceButton choice1='Per Question' choice2='Full Time' />
 
                 </View>
                 <View style={[spacedTitleAndButton, {
@@ -125,10 +128,11 @@ function QuizSettings() {
                 <Text>Display</Text>
                 <View style={{
                     display: 'flex',
-                    flexDirection: 'row'
+                    flexDirection: 'row',
+                    alignItems: 'center'
                 }}>
-                    <Text>Reveal answer in</Text><TouchableOpacity><Text>Every Step</Text></TouchableOpacity><TouchableOpacity><Text>Completion</Text></TouchableOpacity>
-
+                    <Text>Reveal answer in{" "}</Text>
+                    <TwoChoiceButton choice1='Every Step' choice2='Completion' />
                 </View>
                 <View style={[spacedTitleAndButton, {
 
