@@ -22,7 +22,7 @@ export function QuizMainLandingPage() {
 
             <View style={{
                 // flex: 1,
-                marginBottom: 60,
+                marginBottom: 20,
                 paddingHorizontal: 30,
             }}>
                 <TouchableOpacity style={{
@@ -84,7 +84,9 @@ function QuizSettings() {
             display: 'flex',
             flexDirection: 'column',
             gap: 10,
-            padding: 20
+            // padding: 20,
+            paddingHorizontal: 40,
+            paddingTop: 40,
         }}>
             <View >
                 <Text>Scoring</Text>
