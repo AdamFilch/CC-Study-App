@@ -7,15 +7,21 @@ export function TwoChoiceButton({
     choice1: string,
     choice2: string
 }) {
+
+    let selectedColour = 'lightgray'
+    let notSelected = 'gray'
+
+
     return (
         <View style={{
             display: 'flex',
-            flexDirection: 'row'
+            flexDirection: 'row',
         }}>
             <TouchableOpacity style={{
-                borderRadius: '5 5 0 0',
-                height: 30,
-                padding: 5,
+                borderBottomLeftRadius: 5,
+                borderTopLeftRadius: 5,
+                height: 40,
+                padding: 8,
                 opacity: 0.7,
                 backgroundColor: 'lightgray',
                 alignItems: 'center',
@@ -26,9 +32,11 @@ export function TwoChoiceButton({
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={{
-                borderRadius: '0 0 5 5',
-                height: 30,
-                padding: 5,
+                height: 40,
+                borderTopRightRadius: 5,
+                borderBottomRightRadius: 5,
+
+                padding: 8,
                 opacity: 0.7,
                 backgroundColor: 'gray',
                 alignItems: 'center',
