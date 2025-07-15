@@ -1,3 +1,4 @@
+import { TwoChoiceButton } from "@/components/common/two-choice-button";
 import { useFlashcardsStore } from "@/services/flashcards";
 import Checkbox from "expo-checkbox";
 import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
@@ -25,7 +26,6 @@ export function FlashcardsMainLanding() {
             }}>
                 <TouchableOpacity style={{
                     borderRadius: 5,
-
                     height: 60,
                     opacity: 0.7,
                     backgroundColor: '#F6BD60',
@@ -89,8 +89,15 @@ function FlashcardSettings() {
                 </Text>
             </View>
             <View>
-                <View>
-                    <Text>Cards show </Text><TouchableOpacity><Text>Description</Text></TouchableOpacity><TouchableOpacity><Text>Term</Text></TouchableOpacity><Text> first</Text>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center'
+
+                }}>
+                    <Text>Cards show{" "}</Text>
+                    <TwoChoiceButton choice1="Description" choice2="Term" />
+                    <Text>{" "}first</Text>
 
                 </View>
                 <View style={[spacedTitleAndButton]}>
