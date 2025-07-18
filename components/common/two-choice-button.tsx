@@ -12,8 +12,8 @@ export function TwoChoiceButton({
     onSelect: (option: string) => void
 }) {
 
-    let selectedColour = 'lightgray'
-    let notSelected = 'gray'
+    let selectedColour = 'gray'
+    let notSelected = 'lightgray'
 
 
     return (
@@ -41,7 +41,7 @@ export function TwoChoiceButton({
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => {
-                    onSelect(choice1.replaceAll(' ', '_').toLowerCase())
+                    onSelect(choice2.replaceAll(' ', '_').toLowerCase())
                 }}
                 style={{
                     height: 40,
