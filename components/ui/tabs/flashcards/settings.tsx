@@ -51,6 +51,7 @@ function FlashcardSettings() {
         shuffle,
         endless,
         flipped_randomly,
+        show_first,
         setField,
         setTopic,
     } = useFlashcardsStore()
@@ -97,7 +98,7 @@ function FlashcardSettings() {
 
                 }}>
                     <Text>Cards show{" "}</Text>
-                    <TwoChoiceButton choice1="Description" choice2="Term" />
+                    <TwoChoiceButton selected={show_first} choice1="Description" choice2="Term" onSelect={(v) => setField('show_first', v as typeof show_first)} />
                     <Text>{" "}first</Text>
 
                 </View>

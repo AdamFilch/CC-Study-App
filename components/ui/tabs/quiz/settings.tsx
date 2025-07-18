@@ -111,7 +111,7 @@ function QuizSettings() {
                     alignItems: 'center'
                 }}>
                     <Text>15 Min{" "}</Text>
-                    <TwoChoiceButton choice1='Per Question' choice2='Full Time' />
+                    <TwoChoiceButton choice1='Per Question' choice2='Full Time' selected={timer_type} onSelect={(v) => setField('timer_type', v as typeof timer_type)} />
 
                 </View>
                 <View style={[spacedTitleAndButton, {
@@ -134,7 +134,7 @@ function QuizSettings() {
                     alignItems: 'center'
                 }}>
                     <Text>Reveal answer in{" "}</Text>
-                    <TwoChoiceButton choice1='Every Step' choice2='Completion' />
+                    <TwoChoiceButton choice1='Every Step' choice2='Completion' selected={reveal_type} onSelect={(v) => setField('reveal_type', v as typeof reveal_type)} />
                 </View>
                 <View style={[spacedTitleAndButton, {
 
