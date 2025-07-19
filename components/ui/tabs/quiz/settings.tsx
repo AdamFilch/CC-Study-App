@@ -97,8 +97,8 @@ function QuizSettings() {
                     gap: 5
                 }}>
                     <Text>Total Number of Questions</Text>
-                    <NumInput value="" onChange={(v) => {
-                        
+                    <NumInput value={total_questions} onChange={(v) => {
+                        setField('total_questions', v)
                     }} />
                 </View>
                 <View style={{
@@ -108,8 +108,8 @@ function QuizSettings() {
                     gap: 5
                 }}>
                     <Text>Passing Score</Text>
-                    <NumInput value="" onChange={(v) => {
-
+                    <NumInput value={passing_score} onChange={(v) => {
+                        setField('passing_score', v)
                     }} />
                 </View>
             </View>

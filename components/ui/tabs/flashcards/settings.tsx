@@ -53,6 +53,7 @@ function FlashcardSettings() {
         endless,
         flipped_randomly,
         show_first,
+        card_limit,
         setField,
         setTopic,
     } = useFlashcardsStore()
@@ -99,7 +100,7 @@ function FlashcardSettings() {
 
                 }}>
                     <Text>Cards show{" "}</Text>
-                    <TwoChoiceButton selected={show_first} choice1="Description" choice2="Term" onSelect={(v) => setField('show_first', v as typeof show_first)} />
+                    <TwoChoiceButton selected={show_first} choice1="Definition" choice2="Term" onSelect={(v) => setField('show_first', v as typeof show_first)} />
                     <Text>{" "}first</Text>
 
                 </View>
@@ -158,8 +159,8 @@ function FlashcardSettings() {
                     gap: 5
                 }}>
                     <Text>Limit to{" "}</Text>
-                    <NumInput value="" onChange={(v) => {
-                        
+                    <NumInput value={card_limit} onChange={(v) => {
+                        setField('card_limit', v)
                     }} />
                     <Text>{" "}Cards</Text>
                 </View>

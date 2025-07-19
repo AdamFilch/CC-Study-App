@@ -17,7 +17,9 @@ export function NumInput({
                 paddingVertical: 0,
             }}
         >
-            <TextInput style={{
+            <TextInput value={value} onChangeText={(v) => {
+                onChange(v)
+            }} style={{
                 marginVertical: 0
             }}
                 keyboardType="numeric"
