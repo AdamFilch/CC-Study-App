@@ -1,8 +1,9 @@
 
+import { NumInput } from '@/components/common/input-value';
 import { TwoChoiceButton } from '@/components/common/two-choice-button';
 import { useQuizStore } from '@/services/quiz';
 import Checkbox from 'expo-checkbox';
-import { ScrollView, StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Switch, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
 
 export function QuizMainLandingPage() {
@@ -89,17 +90,27 @@ function QuizSettings() {
         }}>
             <View >
                 <Text>Scoring</Text>
-                <View>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 5
+                }}>
                     <Text>Total Number of Questions</Text>
-                    <TextInput
-                        keyboardType="numeric"
-                    />
+                    <NumInput value="" onChange={(v) => {
+                        
+                    }} />
                 </View>
-                <View>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 5
+                }}>
                     <Text>Passing Score</Text>
-                    <TextInput
-                        keyboardType="numeric"
-                    />
+                    <NumInput value="" onChange={(v) => {
+
+                    }} />
                 </View>
             </View>
             <View style={[chaptersStyle]}>

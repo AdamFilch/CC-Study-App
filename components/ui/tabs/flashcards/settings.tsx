@@ -1,7 +1,8 @@
+import { NumInput } from "@/components/common/input-value";
 import { TwoChoiceButton } from "@/components/common/two-choice-button";
 import { useFlashcardsStore } from "@/services/flashcards";
 import Checkbox from "expo-checkbox";
-import { ScrollView, StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Switch, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
 
 export function FlashcardsMainLanding() {
@@ -150,9 +151,18 @@ function FlashcardSettings() {
                         setField('endless', v)
                     }} />
                 </View>
-                <Text>Limit to </Text><TextInput
-                    keyboardType="numeric"
-                /><Text> Cards</Text>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 5
+                }}>
+                    <Text>Limit to{" "}</Text>
+                    <NumInput value="" onChange={(v) => {
+                        
+                    }} />
+                    <Text>{" "}Cards</Text>
+                </View>
             </View>
             <View>
                 <Text>Select Chapters</Text>
