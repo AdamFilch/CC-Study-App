@@ -2,15 +2,14 @@
 import { TwoChoiceButton } from '@/components/common/two-choice-button';
 import { useQuizStore } from '@/services/quiz';
 import Checkbox from 'expo-checkbox';
-import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
 
 export function QuizMainLandingPage() {
     return (
-        <View style={{
+        <ScrollView style={{
             flex: 1,
             flexDirection: 'column',
-            height: '100%',
             backgroundColor: '#FFF'
         }}>
             <View style={{
@@ -39,7 +38,7 @@ export function QuizMainLandingPage() {
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -86,7 +85,7 @@ function QuizSettings() {
             gap: 10,
             // padding: 20,
             paddingHorizontal: 40,
-            paddingTop: 40,
+            paddingTop: 20,
         }}>
             <View >
                 <Text>Scoring</Text>

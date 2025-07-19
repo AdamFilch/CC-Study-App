@@ -1,12 +1,12 @@
 import { TwoChoiceButton } from "@/components/common/two-choice-button";
 import { useFlashcardsStore } from "@/services/flashcards";
 import Checkbox from "expo-checkbox";
-import { StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Switch, Text, TextInput, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
 
 export function FlashcardsMainLanding() {
     return (
-        <View style={{
+        <ScrollView style={{
             flex: 1,
             flexDirection: 'column',
             height: '100%',
@@ -37,7 +37,7 @@ export function FlashcardsMainLanding() {
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -83,7 +83,7 @@ function FlashcardSettings() {
             flexDirection: 'column',
             gap: 10,
             paddingHorizontal: 40,
-            paddingTop: 40,
+            paddingTop: 30,
         }}>
             <View>
                 <Text>
