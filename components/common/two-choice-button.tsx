@@ -28,7 +28,7 @@ export function TwoChoiceButton({
                 style={{
                     borderBottomLeftRadius: 5,
                     borderTopLeftRadius: 5,
-                    height: 40,
+                    height: 35,
                     padding: 8,
                     opacity: 0.7,
                     backgroundColor: choice1.replaceAll(' ', '_').toLowerCase() == selected ? selectedColour : notSelected,
@@ -44,7 +44,7 @@ export function TwoChoiceButton({
                     onSelect(choice2.replaceAll(' ', '_').toLowerCase())
                 }}
                 style={{
-                    height: 40,
+                    height: 35,
                     borderTopRightRadius: 5,
                     borderBottomRightRadius: 5,
 

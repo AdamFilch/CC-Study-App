@@ -1,3 +1,4 @@
+import { Divider } from "@/components/blocks/divider";
 import { NumInput } from "@/components/common/input-value";
 import { TwoChoiceButton } from "@/components/common/two-choice-button";
 import { useFlashcardsStore } from "@/services/flashcards";
@@ -11,18 +12,17 @@ export function FlashcardsMainLanding() {
             flex: 1,
             flexDirection: 'column',
             height: '100%',
-            backgroundColor: '#FFF'
+            backgroundColor: '#FFF',
         }}>
             <View style={{
                 flex: 1,
             }}>
-
                 <FlashcardSettings />
             </View>
 
             <View style={{
                 // flex: 1,
-                marginBottom: 20,
+                marginTop: 20,
                 paddingHorizontal: 30,
             }}>
                 <TouchableOpacity style={{
@@ -78,32 +78,41 @@ function FlashcardSettings() {
         gap: 20
     }
 
+    const sectionStyle: StyleProp<ViewStyle> = {
+        backgroundColor: 'darkgray',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        marginHorizontal: 20,
+        borderRadius: 10
+    }
+
 
     return (
         <View style={{
             display: 'flex',
             flexDirection: 'column',
             gap: 10,
-            paddingHorizontal: 40,
-            paddingTop: 30,
+            paddingTop: 50,
         }}>
             <View>
                 <Text>
                     Just Practice
                 </Text>
             </View>
-            <View>
+            <View style={[sectionStyle]}>
                 <View style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    alignItems: 'center'
-
+                    alignItems: 'center',
+                    marginBottom: 5,
+                    gap: 5,
                 }}>
                     <Text>Cards show{" "}</Text>
                     <TwoChoiceButton selected={show_first} choice1="Definition" choice2="Term" onSelect={(v) => setField('show_first', v as typeof show_first)} />
                     <Text>{" "}first</Text>
 
                 </View>
+                <Divider />
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Cards are flipped randomly</Text>
                     <Switch
@@ -114,6 +123,7 @@ function FlashcardSettings() {
 
                     />
                 </View>
+                <Divider />
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Shuffle</Text>
                     <Switch
@@ -125,7 +135,7 @@ function FlashcardSettings() {
                 </View>
 
             </View>
-            <View>
+            <View style={[sectionStyle]}>
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Display Chapter and Category</Text>
                     <Switch
@@ -135,6 +145,7 @@ function FlashcardSettings() {
                         }}
                     />
                 </View>
+                <Divider />
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Display Progress Tracker</Text>
                     <Switch
@@ -145,13 +156,15 @@ function FlashcardSettings() {
                     />
                 </View>
             </View>
-            <View>
+            <View style={[sectionStyle]}>
                 <View style={[spacedTitleAndButton]}>
                     <Text style={[settingDescription]}>Repeat Endlessly</Text>
                     <Switch value={endless} onValueChange={(v) => {
                         setField('endless', v)
                     }} />
                 </View>
+                <Divider />
+
                 <View style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -165,9 +178,11 @@ function FlashcardSettings() {
                     <Text>{" "}Cards</Text>
                 </View>
             </View>
-            <View>
-                <Text>Select Chapters</Text>
-                <View>
+            <View style={[sectionStyle]}>
+                <View style={{
+                    display: 'flex',
+                    gap: 5,
+                }}>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
                         <Checkbox
@@ -178,6 +193,8 @@ function FlashcardSettings() {
                             }}
                         />
                     </View>
+                    <Divider />
+
                     <View style={[spacedTitleAndButton]}>
 
                         <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
@@ -189,6 +206,8 @@ function FlashcardSettings() {
                             }}
                         />
                     </View>
+                    <Divider />
+
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
                         <Checkbox
@@ -199,7 +218,7 @@ function FlashcardSettings() {
                             }}
                         />
                     </View>
-
+                    <Divider />
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
                         <Checkbox
@@ -211,6 +230,7 @@ function FlashcardSettings() {
                             }}
                         />
                     </View>
+                    <Divider />
 
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
