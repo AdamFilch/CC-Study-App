@@ -72,12 +72,6 @@ function FlashcardSettings() {
         fontWeight: 600
     }
 
-    const chaptersStyle: StyleProp<ViewStyle> = {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 20
-    }
-
     const sectionStyle: StyleProp<ViewStyle> = {
         backgroundColor: 'darkgray',
         paddingHorizontal: 20,
@@ -94,11 +88,11 @@ function FlashcardSettings() {
             gap: 10,
             paddingTop: 50,
         }}>
-            <View>
+            {/* <View>
                 <Text>
                     Just Practice
                 </Text>
-            </View>
+            </View> */}
             <View style={[sectionStyle]}>
                 <View style={{
                     display: 'flex',
@@ -182,6 +176,7 @@ function FlashcardSettings() {
                 <View style={{
                     display: 'flex',
                     gap: 5,
+                    paddingVertical: 5,
                 }}>
                     <View style={[spacedTitleAndButton]}>
                         <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>

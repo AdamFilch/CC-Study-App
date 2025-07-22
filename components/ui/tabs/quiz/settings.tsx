@@ -1,4 +1,5 @@
 
+import { Divider } from '@/components/blocks/divider';
 import { NumInput } from '@/components/common/input-value';
 import { TwoChoiceButton } from '@/components/common/two-choice-button';
 import { useQuizStore } from '@/services/quiz';
@@ -22,7 +23,7 @@ export function QuizMainLandingPage() {
 
             <View style={{
                 // flex: 1,
-                marginBottom: 20,
+                marginTop: 20,
                 paddingHorizontal: 30,
             }}>
                 <TouchableOpacity style={{
@@ -73,10 +74,13 @@ function QuizSettings() {
         fontWeight: 600
     }
 
-    const chaptersStyle: StyleProp<ViewStyle> = {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 20
+
+    const sectionStyle: StyleProp<ViewStyle> = {
+        backgroundColor: 'darkgray',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        marginHorizontal: 20,
+        borderRadius: 10
     }
 
     return (
@@ -85,10 +89,9 @@ function QuizSettings() {
             flexDirection: 'column',
             gap: 10,
             // padding: 20,
-            paddingHorizontal: 40,
-            paddingTop: 20,
+            paddingTop: 50,
         }}>
-            <View >
+            <View style={[sectionStyle]}>
                 <Text>Scoring</Text>
                 <View style={{
                     display: 'flex',
@@ -101,6 +104,7 @@ function QuizSettings() {
                         setField('total_questions', v)
                     }} />
                 </View>
+                <Divider />
                 <View style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -113,7 +117,7 @@ function QuizSettings() {
                     }} />
                 </View>
             </View>
-            <View style={[chaptersStyle]}>
+            <View style={[sectionStyle]}>
                 <Text>Timer</Text>
                 <View style={{
                     display: 'flex',
@@ -124,6 +128,8 @@ function QuizSettings() {
                     <TwoChoiceButton choice1='Per Question' choice2='Full Time' selected={timer_type} onSelect={(v) => setField('timer_type', v as typeof timer_type)} />
 
                 </View>
+                <Divider />
+
                 <View style={[spacedTitleAndButton, {
 
                 }]}>
@@ -136,7 +142,7 @@ function QuizSettings() {
                     />
                 </View>
             </View>
-            <View style={[chaptersStyle]}>
+            <View style={[sectionStyle]}>
                 <Text>Display</Text>
                 <View style={{
                     display: 'flex',
@@ -146,6 +152,8 @@ function QuizSettings() {
                     <Text>Reveal answer in{" "}</Text>
                     <TwoChoiceButton choice1='Every Step' choice2='Completion' selected={reveal_type} onSelect={(v) => setField('reveal_type', v as typeof reveal_type)} />
                 </View>
+                <Divider />
+
                 <View style={[spacedTitleAndButton, {
 
                 }]}>
@@ -158,62 +166,76 @@ function QuizSettings() {
                     />
                 </View>
             </View>
-            <View style={[chaptersStyle]}>
-                <Text>Select Chapters</Text>
-                <View>
-                    <View style={[spacedTitleAndButton]}>
-                        <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
-                        <Checkbox
-                            disabled={false}
-                            value={topics.chapter1}
-                            onValueChange={(v) => {
-                                setTopic('chapter1', v)
-                            }}
-                        />
-                    </View>
-                    <View style={[spacedTitleAndButton]}>
-                        <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
-                        <Checkbox
-                            disabled={false}
-                            value={topics.chapter2}
-                            onValueChange={(v) => {
-                                setTopic('chapter2', v)
-                            }}
-                        />
+            <View style={[sectionStyle]}>
+                <View style={{
+                    display: 'flex',
+                    paddingVertical: 5,
+                    gap: 5,
+                }}>
 
-                    </View>
-                    <View style={[spacedTitleAndButton]}>
-                        <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
-                        <Checkbox
-                            disabled={false}
-                            value={topics.chapter3}
-                            onValueChange={(v) => {
-                                setTopic('chapter3', v)
-                            }}
-                        />
+                    <View>
+                        <View style={[spacedTitleAndButton]}>
+                            <Text style={[settingDescription]}>Chapter 1 - Security Principles</Text>
+                            <Checkbox
+                                disabled={false}
+                                value={topics.chapter1}
+                                onValueChange={(v) => {
+                                    setTopic('chapter1', v)
+                                }}
+                            />
+                        </View>
+                        <Divider />
 
-                    </View>
-                    <View style={[spacedTitleAndButton]}>
-                        <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
-                        <Checkbox
-                            disabled={false}
-                            value={topics.chapter4}
-                            onValueChange={(v) => {
-                                setTopic('chapter4', v)
-                            }}
-                        />
+                        <View style={[spacedTitleAndButton]}>
+                            <Text style={[settingDescription]}>Chapter 2 - Incident Response, Business Continuity and Disaster Recovery Concepts</Text>
+                            <Checkbox
+                                disabled={false}
+                                value={topics.chapter2}
+                                onValueChange={(v) => {
+                                    setTopic('chapter2', v)
+                                }}
+                            />
 
-                    </View>
-                    <View style={[spacedTitleAndButton]}>
-                        <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
-                        <Checkbox
-                            disabled={false}
-                            value={topics.chapter5}
-                            onValueChange={(v) => {
-                                setTopic('chapter5', v)
-                            }}
-                        />
+                        </View>
+                        <Divider />
 
+                        <View style={[spacedTitleAndButton]}>
+                            <Text style={[settingDescription]}>Chapter 3 - Access Control Concepts</Text>
+                            <Checkbox
+                                disabled={false}
+                                value={topics.chapter3}
+                                onValueChange={(v) => {
+                                    setTopic('chapter3', v)
+                                }}
+                            />
+
+                        </View>
+                        <Divider />
+
+                        <View style={[spacedTitleAndButton]}>
+                            <Text style={[settingDescription]}>Chapter 4 - Network Security</Text>
+                            <Checkbox
+                                disabled={false}
+                                value={topics.chapter4}
+                                onValueChange={(v) => {
+                                    setTopic('chapter4', v)
+                                }}
+                            />
+
+                        </View>
+                        <Divider />
+
+                        <View style={[spacedTitleAndButton]}>
+                            <Text style={[settingDescription]}>Chapter 5 - Security Operations</Text>
+                            <Checkbox
+                                disabled={false}
+                                value={topics.chapter5}
+                                onValueChange={(v) => {
+                                    setTopic('chapter5', v)
+                                }}
+                            />
+
+                        </View>
                     </View>
                 </View>
             </View>
